@@ -1,3 +1,3 @@
-## Simple React categories tree
+## React categories tree
 
 
