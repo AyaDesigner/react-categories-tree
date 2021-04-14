@@ -31,8 +31,6 @@ const RootCategory = () => {
             name: categoryInput
         })
         setCategories(copyOfCategories);
-        console.log(categoryInput);
-        console.log(categories);
     }
 
     const deleteChildCategory = (id) => {
@@ -62,7 +60,7 @@ const RootCategory = () => {
                 </form>
             </Box>
             <Box>
-                {categories.length > 0 ? categories.map(category => <Category category={category}   deleteFunctionFromFather={deleteChildCategory}/>) : ""}
+                {categories.length > 0 ? categories.map((category,key) => <Category key={nanoid()} category={category} deleteFunctionFromFather={deleteChildCategory}/>) : ""}
             </Box>
         </div>);
 }
